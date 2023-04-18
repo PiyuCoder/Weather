@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/moony"
+
+    android:id="@+id/swipeLay"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:id="@+id/scrollView"
+        >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:progress="@integer/material_motion_duration_long_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/relLay"
+        >
+
+        <ImageView
+            android:id="@+id/currIcon"
+            android:layout_width="150dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="260dp"
+            android:layout_marginLeft="200dp"
+            />
+        <TextView
+            android:id="@+id/currStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_marginRight="80dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/lay_temp"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:id="@+id/currSunStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_marginRight="80dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/currStatus"
+            android:layout_marginLeft="20dp"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:id="@+id/currSunSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_marginRight="80dp"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:id="@+id/currentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+
+
+            />
+
+        <LinearLayout
+            android:id="@+id/lay_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp">
+
+            <TextView
+                android:id="@+id/currentTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22 "
+                android:textColor="@color/white"
+                android:textSize="70dp"
+                android:layout_marginStart="15dp"
+
+                >
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="o"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="-13dp"
+                android:layout_gravity="center"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="-1dp"
+                android:layout_gravity="center"
+
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/currLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/lay_temp"
+            android:layout_marginTop="30dp"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/card1"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="10dp"
+
+
+            android:backgroundTint="#11F10505"
+            app:cardCornerRadius="15dp">
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:textColor="#979595"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="DETAILS"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:textColor="#979595"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Humidity"
+                android:textSize="15dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="70dp"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:textColor="#979595"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Wind"
+                android:textSize="15dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="70dp"/>
+
+            <TextView
+                android:id="@+id/humidy"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="55.55%"
+                android:textSize="25dp"
+                android:layout_marginStart="79dp"
+                android:layout_marginTop="90dp"/>
+            <TextView
+                android:id="@+id/windy"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="5.5 kmph"
+                android:textSize="25dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="90dp"/>
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:textColor="#979595"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Precipitation"
+                android:textSize="15dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:textColor="#979595"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Visibility"
+                android:textSize="15dp"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="180dp"/>
+
+            <TextView
+                android:id="@+id/precipitation"
+
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="0.0 mm"
+                android:textSize="25dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="200dp"/>
+
+            <TextView
+                android:id="@+id/visible"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="225dp"
+                android:layout_marginTop="200dp"
+                android:text="55.55 km"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_below="@+id/currLoc"
+            android:layout_marginStart="10dp"
+
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#11F10505"
+            app:cardCornerRadius="15dp">
+
+
+            <TextView
+                android:id="@+id/currentWeather"
+                android:layout_width="wrap_content"
+                android:textColor="#979595"
+                android:layout_height="wrap_content"
+                android:text="HOURLY FORECAST"
+                android:textSize="18dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card2"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#11F10505"
+            app:cardCornerRadius="15dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:padding="5dp"
+                    android:textColor="#979595"
+                    android:text="Wanna know the weather of other places?"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etCity"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Enter Place"
+                    android:textColorHint="#979595"
+                    android:textColor="@color/white"
+                    android:minHeight="48dp" />
+
+                <Button
+                    android:id="@+id/btnWeath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="GetWeather"
+                    android:text="Get Weather"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1E88FA07"/>
+
+
+                <TextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:text=""
+                    android:textColor="@color/white"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="100dp"
+                android:id="@+id/imgNewWeath"/>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
